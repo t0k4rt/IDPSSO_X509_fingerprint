@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor entityID="https://keycloak.example.com"
+                   xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                   xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <IDPSSODescriptor WantAuthnRequestsSigned="true"
+      protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <SingleLogoutService
+         Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+         Location="https://keycloak.example.com" />
+   <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+   <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+   <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+   <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+
+      <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+         Location="https://keycloak.example.com" />
+      <KeyDescriptor use="signing">
+        <dsig:KeyInfo>
+          <dsig:KeyName>0pw_n0VTcVjwOUqiEz0Ili3F7nND8WU1_mi6aCJB8gI</dsig:KeyName>
+          <dsig:X509Data>
+            <dsig:X509Certificate>MIICozCCAYsCBgFolJrGdjANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDDApLYWlyb3NmaXJlMB4XDTE6MDEyODEzMTQ1N1oXDTI5MDEyODEzMTYzN1owFTETMBEGA1UEAwwKS2Fpcm9zZmlyZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/HTP8odnCgH9c+PAp53zlcgt3ZhVYcn4k/cxy3MqjwBurbmblpXRRbDlnwNw29hMIerbzhxt5sq9Nb+BctGmVwD8SPkM0ZGOPR7yWKadZ1bcpfZisqc0qvv1/RG0aCNMYwuREtphMCXW4Ve3E/WdyxDmEyYdVeoxjL1q+qWO3Jfm29nm5wxPsiTEvOZAu4BDZ34J2J/IajXDBpmT7ou0hyS9zn8MmdeII6hwrqM24P101+Hp9vkQVQQ3KAHijmGYtGopOdN3lmk6rmkReiZwWmX+Efv2JPo3guA//x3FzYdj+i8QpGrLyURof0gCNzwlX0/5mEgt/DMW9VO3hwz6ECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAUrtsPcrK6UQA7N3EI0xIFFP1giG7eoB52A19gzEMLOI1WjhBGVX8zefgExGwvt+9E5b22CxvfbZW2syjTnVvn0kis3/w/1NHKmuB0g8x1XHpN3C4e00jH432eFFnEiCN4PRG3+kzE2KhPjIW847g/DF4s+ZlnOpgGoO5OyLiwQkdEnqA1exJZ2NzhAtlodCQN77LfW/DJGClLnDKcCr1gKWw/BUR2yXmmaqiMOkmcuvAON2IDGI7HOux1O3nYa5NG8gKqWw/e4YwBFfgl3UF5u9rPiJFyGQpqSrKFGkc5qKMoXd4gt6tq57vYKbwImnMoZfYD6XN+MXMIy3qBrZJQg==</dsig:X509Certificate>
+          </dsig:X509Data>
+        </dsig:KeyInfo>
+      </KeyDescriptor>
+   </IDPSSODescriptor>
+</EntityDescriptor>
