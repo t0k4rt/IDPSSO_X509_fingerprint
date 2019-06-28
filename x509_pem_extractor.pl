@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -28,7 +28,7 @@ my $end = "-----END CERTIFICATE-----";
 my $count = floor((length $result)/64);
 for (my $i = 0; $i <= $count; $i++) {
     my $str = substr $result, ($i*64), 64;
-    $start = $start . "\n" . $str 
+    $start = $start . "\n" . $str
 }
 
 $start = $start . "\n" . $end . "\n";
