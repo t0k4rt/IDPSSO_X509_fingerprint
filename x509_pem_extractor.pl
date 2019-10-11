@@ -31,5 +31,5 @@ for (my $i = 0; $i <= $count; $i++) {
     $start = $start . "\n" . $str 
 }
 
-$start = $start . "\n" . $end . "\n";
+$start = $start . $end . "\n";
 print $start;
